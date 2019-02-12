@@ -40,7 +40,7 @@ class LinkedList {
             let node = new Node(val);
             let current, previous;
 
-            let current = this.head;
+            current = this.head;
 
             if (index === 0) {
                 node.next = this.head;
@@ -93,7 +93,7 @@ class LinkedList {
 
         while (current != null) {
             if (current.val === val) {
-                if (prev === null) {
+                if (previous === null) {
                     this.head = current.next;
                 } else {
                     previous.next = current.next;
@@ -116,7 +116,7 @@ class LinkedList {
         let count = 0;
         let current = this.head;
 
-        while(current.next != null) {
+        while(current != null) {
             if (current.val === val) {
                 return count; 
             }
@@ -147,3 +147,38 @@ class LinkedList {
         console.log(arr);
     }
 }
+
+module.exports = LinkedList;
+
+
+// let ll = new LinkedList();
+
+// console.log(ll.isEmpty());
+
+// ll.insert(10);
+// ll.printList();
+
+// console.log(ll.sizeOfList());
+
+// ll.insert(20);
+// ll.insert(30);
+// ll.insert(40);
+// ll.insert(50);
+
+// ll.printList();
+
+// console.log("is element removed ? " + ll.removeVal(50));
+
+// ll.printList();
+
+// console.log("Index of 40 " + ll.indexOf(40));
+
+// ll.insertNodeAt(60, 2);
+
+// ll.printList();
+
+// console.log("is list empty ? " + ll.isEmpty());
+
+// console.log(ll.removeFrom(3));
+
+// ll.printList();
